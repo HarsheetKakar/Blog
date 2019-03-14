@@ -1,0 +1,9 @@
+{% extends '../base.html' %}
+
+{% block content %}
+
+<form action='{% url posts_list %}' method='POST'>
+  {{form}}
+</form>
+
+{% endblock %}
