@@ -9,3 +9,6 @@ def posts_list(request, *args, **kwargs):
 def post_new(request, *args, **kwargs):
     form = ArticleForm()
     return render(request,'blog_posts/post_article.html' ,{'form': form})
+
+def login(request, *args, **kwargs):
+    pass
