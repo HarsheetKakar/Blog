@@ -6,7 +6,7 @@ from django.contrib.auth.models import (AbstractBaseUser,
 class UserManager(BaseUserManager): #So that we can use get_user_model
     def create_user(self,email,password):
         """Creates a New user"""
-        user = self.model(email = email)
+        user = self.model(email = self.normalize_email(email))
         user.set_password(password)
         user.save(using = self._db)
 
